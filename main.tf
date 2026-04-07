@@ -1,21 +1,18 @@
 
 resource "azurerm_resource_group" "rg-block" {
-  name = "rg1"
+  name = "storage-rg"
   location = "eastus"
   
 }
-resource "azurerm_virtual_network" "vnet-block" {
-  name = "vnet1"
-  resource_group_name = azurerm_resource_group.rg-block.name
-  location = azurerm_resource_group.rg-block.location
-  address_space = ["10.0.0.0/24"]
-}
 
-resource "azurerm_virtual_network" "vnet-block2" {
-  name = "vnet2"
-  resource_group_name = azurerm_resource_group.rg-block.name
-  location = azurerm_resource_group.rg-block.location
-  address_space = ["10.0.1.0/24"]
-}
-// deleting the resource group & 2 VNets resources
+# resource "azurerm_storage_account" "storage-block" {
+#   name                     = 
+#   resource_group_name      = 
+#   location                 = 
+#   account_tier             = "Premium"
+#   account_replication_type = 
+#   account_kind             = "BlobStorage"
 
+#   tags = 
+
+# }
