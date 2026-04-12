@@ -21,6 +21,11 @@ resource "azurerm_resource_group" "rg-block4" {
   location = "eastus"
   
 }
+resource "azurerm_resource_group" "rg-block5" {
+  name = "storage2-rg"
+  location = "eastus"
+  
+}
 
 
 
